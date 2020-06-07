@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <meta name="description" content="Here is your description.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/css/fontawesome.css"> -->
+  {% for css in cssFiles %}
+  <link rel="stylesheet" href="/{{ css }}">
+  {% endfor %}
+</head>
+
+
+<body>
+  <main class="container d-lg-flex">
+    <div class="sidebar">
+      <header class="header">
+        <h1 class="logo">
+          <a href="home.html" class="logo-link">
+            <img class="logo-img" src="public/img/profile.jpg" alt="TITLE">
+            <span class="logo-title">Blog Title</span>
+          </a>
+        </h1>
+        <!-- <h5>Just a few words</h5> -->
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla consequatur deserunt, fugit nam distinctio
+          molestiae voluptates cumque iure.
+        </p>
+        <ul class="social">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fab fa-git"></i></a></li>
+          <li><a href="#"><i class="fab fa-stack-overflow"></i></a></li>
+          <li><a href="#"><i class="fas fa-rss"></i></a></li>
+        </ul>
+      </header>
+
+      <div class="widgets d-lg-block">
+        <div class="widget">
+          <div class="widget-header">
+            <h4 class="widget-title">Pages</h4>
+          </div>
+          <div class="widget-body">
+            <ul class="widget-list">
+              <li><a href="home.html">Home Page</a></li>
+              <li><a href="post.html">Post Page</a></li>
+              <li><a href="contact.html">Contact Page</a></li>
+              <li><a href="about.html">About Page</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="widget d-none">
+          <div class="widget-header">
+            <h4 class="widget-title">Tags</h4>
+          </div>
+          <div class="widget-body">
+            <ul class="widget-tags">
+              <li><a href="/">Tech</a></li>
+              <li><a href="/">Microsoft</a></li>
+              <li><a href="/">Apple</a></li>
+              <li><a href="/">Google</a></li>
+              <li><a href="/">Sony</a></li>
+              <li><a href="/">Samsung</a></li>
+              <li><a href="/">LG</a></li>
+              <li><a href="/">Tech</a></li>
+              <li><a href="/">Microsoft</a></li>
+              <li><a href="/">Apple</a></li>
+              <li><a href="/">Google</a></li>
+              <li><a href="/">Sony</a></li>
+              <li><a href="/">Samsung</a></li>
+              <li><a href="/">LG</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="widget d-none">
+          <div class="widget-header">
+            <h4 class="widget-title">List</h4>
+          </div>
+          <div class="widget-body">
+            <ul class="widget-list">
+              <li><a href="/">Best cruise ships for 2019 according to Cruise Critic editors</a></li>
+              <li><a href="/">Top 10 things to see and do in Spain</a></li>
+              <li><a href="/">European destinations for weekend breaks in May</a></li>
+              <li><a href="/">Shooting wildlife with a camera on a Botswana Safari</a></li>
+              <li><a href="/">10 great ski resorts in Europe you can reach by train from London</a></li>
+              <li><a href="/">Charter a boat and sail to these 5 sunny sailing destinations</a></li>
+              <li><a href="/">Exploring the tiny Island of Elba, Tuscany, Italy</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="widget d-none">
+          <div class="widget-header">
+            <h4 class="widget-title">Text</h4>
+          </div>
+          <div class="widget-body">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commoda autem et incommoda in eo
+              genere sunt, quae praeposita et reiecta diximus; Quae duo sunt, unum facit. Beatus sibi videtur esse
+              moriens. Duo Reges: constructio
+              interrete.</p>
+          </div>
+        </div>
+
+
+        <div class="widget d-none">
+          <div class="widget-header">
+            <h4 class="widget-title">Newsletter</h4>
+          </div>
+          <div class="widget-body">
+            <p>Get notified when a new post is published.</p>
+            <form action="">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="someone@example.com" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="content">
+        {{ content | safe }}
+    </div>
+  </main>
+  <footer class="footer">
+  </footer>
+
+  {% for js in jsFiles %}
+  <script type="text/javascript" src="/{{ js }}"></script></body>
+  {% endfor %}
+</body>
+
+</html>

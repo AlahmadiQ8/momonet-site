@@ -4,7 +4,8 @@
   "description": "A light foundation for your next frontend project based on webpack.",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "dev:webpack": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "dev:11ty": "eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "@11ty/eleventy": "^0.11.0",
     "@babel/polyfill": "^7.10.1",
     "bootstrap": "^4.5.0",
-    "core-js": "^3.6.5"
+    "core-js": "^3.6.5",
+    "glob": "^7.1.6"
   }
 }
