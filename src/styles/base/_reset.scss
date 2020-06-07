@@ -1,0 +1,30 @@
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+iframe {
+  width: 100%;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+code {
+  padding: 0.125rem 0.25rem;
+}

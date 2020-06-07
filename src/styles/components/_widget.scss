@@ -1,0 +1,35 @@
+.widget {
+  margin-bottom: 2rem;
+
+  &-header {
+    background: rgba(255,255,255,0.1);
+    margin: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
+
+  &-title {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 3.75rem;
+  }
+
+  &-body {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem !important;
+    font-size: 0.9875rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+
+  .form-control {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+}

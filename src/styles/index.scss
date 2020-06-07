@@ -1,6 +1,20 @@
-$body-color: slateblue;
+@import "~bootstrap/scss/bootstrap";
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
-}
+@import "_fontawesome.css";
+@import "prism.css";
+
+@import "base/reset";
+
+@import "layout/main";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/box";
+
+@import "widgets/tags";
+@import "widgets/list";
+
+@import "components/form";
+@import "components/navigation";
+@import "components/widget";
+
+@import "pages/post";
