@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
   <meta name="description" content="Here is your description.">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:type" content="website" />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <!-- <link rel="stylesheet" href="/css/fontawesome.css"> -->
@@ -20,23 +26,19 @@
     <div class="sidebar">
       <header class="header">
         <h1 class="logo">
-          <a href="home.html" class="logo-link">
+          <a href="/" class="logo-link">
             <img class="logo-img" src="public/img/profile.jpg" alt="TITLE">
-            <span class="logo-title">Blog Title</span>
+            <span class="logo-title">MomoNet</span>
           </a>
         </h1>
-        <!-- <h5>Just a few words</h5> -->
         <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla consequatur deserunt, fugit nam distinctio
-          molestiae voluptates cumque iure.
+          {{ shortAboutMe }}
         </p>
         <ul class="social">
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="#"><i class="fab fa-git"></i></a></li>
-          <li><a href="#"><i class="fab fa-stack-overflow"></i></a></li>
-          <li><a href="#"><i class="fas fa-rss"></i></a></li>
+          <li><a href="{{ linkedin.url }}"><i class="fab fa-{{ linkedin.icon }}"></i></a></li>
+          <li><a href="{{ github.url }}"><i class="fab fa-{{ github.icon }}"></i></a></li>
+          <li><a href="{{ email.url }}"><i class="fas fa-{{ email.icon }}"></i></a></li>
+          <li><a href="{{ stackoverflow.url }}"><i class="fab fa-{{ stackoverflow.icon }}"></i></a></li>
         </ul>
       </header>
 
