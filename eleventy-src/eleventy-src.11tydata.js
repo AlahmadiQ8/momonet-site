@@ -38,6 +38,6 @@ module.exports = () =>{
         layout: 'layouts/base.njk',
         jsFiles,
         cssFiles,
-        ...social
+        ...social,
     };
 };
