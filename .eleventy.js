@@ -1,9 +1,15 @@
+const { format } = require('date-fns');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addFilter("debug", function (value) {
     console.log(Object.keys(value))
     return value;
+  });
+
+  eleventyConfig.addFilter('formatDate', (dateStr) => {
+    return format(new Date(dateStr), 'MMM d, yyyy');
   });
 
   eleventyConfig.addCollection("tagList", getTaglist);

@@ -22,4 +22,23 @@
       color: #000;
     }
   }
+
+  &.dark {
+    a {
+      background-color: #576270;
+      color: #fff;
+    }
+    a:hover {
+      background: #3c4559;
+      color: #fff;
+    }
+  }
+
+  &.sm {
+    a {
+      padding: 0.1rem 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+    }
+  }
 }

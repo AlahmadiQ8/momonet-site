@@ -1,1 +1,24 @@
-<h1>Hiiii</h1>
+<div class="box">
+  <h4 class="box-title">Posts</h4>
+  <div class="box-body">
+    <ul class="box-list">
+      {%- for post in collections.posts | reverse -%}
+      {%- set href -%}
+      {% if post.data.external %}{{ post.data.external }}{% else %}{{ post.url }}{% endif %}
+      {%- endset -%}
+      <li>
+        <a href="{{ href | url }}">{{ post.data.title }}</a>
+        <div class="post-meta d-flex">
+          <time class="post-meta-time">{{ post.date | formatDate }}</time>
+        </div>
+        <div>
+          {%- for tag in post.data.tags -%}
+          {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
+          <a  class="" href="{{ tagUrl | url }}"><span class="badge badge-pill badge-secondary">{{ tag }}</span></a>
+          {% endfor %}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>

@@ -27,7 +27,7 @@
       <header class="header">
         <h1 class="logo">
           <a href="/" class="logo-link">
-            <img class="logo-img" src="public/img/profile.jpg" alt="TITLE">
+            <img class="logo-img" src="/public/img/profile.jpg" alt="TITLE">
             <span class="logo-title">MomoNet</span>
           </a>
         </h1>
@@ -57,26 +57,16 @@
           </div>
         </div>
 
-        <div class="widget d-none">
+        <div class="widget d-none d-lg-block">
           <div class="widget-header">
             <h4 class="widget-title">Tags</h4>
           </div>
           <div class="widget-body">
             <ul class="widget-tags">
-              <li><a href="/">Tech</a></li>
-              <li><a href="/">Microsoft</a></li>
-              <li><a href="/">Apple</a></li>
-              <li><a href="/">Google</a></li>
-              <li><a href="/">Sony</a></li>
-              <li><a href="/">Samsung</a></li>
-              <li><a href="/">LG</a></li>
-              <li><a href="/">Tech</a></li>
-              <li><a href="/">Microsoft</a></li>
-              <li><a href="/">Apple</a></li>
-              <li><a href="/">Google</a></li>
-              <li><a href="/">Sony</a></li>
-              <li><a href="/">Samsung</a></li>
-              <li><a href="/">LG</a></li>
+              {%- for tag in collections.tagList -%}
+              {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
+              <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
