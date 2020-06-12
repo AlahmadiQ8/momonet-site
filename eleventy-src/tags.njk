@@ -5,12 +5,36 @@ pagination:
   alias: tag
   filter:
     - all
-    - posts
-    - notes
     - tagList
   addAllPagesToCollections: true
 title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<h1>Tagged “{{ tag }}”</h1>
+{% set postslist = collections[ tag ] %}
 
+<div class="box">
+  <h4 class="box-title">Tagged '{{ tag }}'</h4>
+  <div class="box-body">
+    <ul class="box-list">
+      {%- for post in postslist | reverse -%}
+      {%- set href -%}
+      {% if post.data.external %}{{ post.data.external }}{% else %}{{ post.url }}{% endif %}
+      {%- endset -%}
+      <li>
+        <a href="{{ href | url }}">{{ post.data.title }}</a>
+        <div class="post-meta d-flex">
+          <time class="post-meta-time">{{ post.date | formatDate }}</time>
+          <ul class="post-meta-categories">
+            {%- for tag in post.data.ownTags -%}
+            {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
+            <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>

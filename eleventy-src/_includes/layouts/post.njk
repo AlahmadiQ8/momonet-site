@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+    <div class="post-meta d-flex">
+      <time class="post-meta-time">{{ page.date | formatDate }}</time>
+      <ul class="post-meta-categories">
+        {%- for tag in ownTags -%}
+        {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
+        <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post-footer mt-5">
+    <ul class="post-tags">
+      {%- for tag in ownTags -%}
+      {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
+      <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </footer>
+</article>

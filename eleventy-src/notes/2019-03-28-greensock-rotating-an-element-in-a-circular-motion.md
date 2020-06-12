@@ -7,7 +7,7 @@ tags:
 
 I came back from [Sara Dranser and Val head’s animation workshop](https://webanimationworkshops.com/) super excited to practice what I learned. Sara and Val did an amazing job laying out the fundamentals as well as practical exercises to get our hands dirty. I found find myself being addicted to playing around with SVG animations with GreenSock. 
 
-![Me, Sarah, and Val in Chicago March 20th 2018]({{ assets.img }}/me-sara-val.jpg)
+![Me, Sarah, and Val in Chicago March 20th 2018](/public/img/me-sara-val.jpg)
 
 One project I worked on is making a rotating Ferris wheel. One challenge that had me scratching my head for hours was how to rotate the carts on the Ferris wheel while keeping their orientation still.
 

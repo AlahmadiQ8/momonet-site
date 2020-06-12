@@ -4,6 +4,7 @@
   "description": "A light foundation for your next frontend project based on webpack.",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
+    "build:watch": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors --watch",
     "dev:webpack": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
     "dev:11ty": "eleventy --serve"
   },

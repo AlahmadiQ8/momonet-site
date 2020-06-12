@@ -39,5 +39,12 @@ module.exports = () =>{
         jsFiles,
         cssFiles,
         ...social,
+        eleventyComputed: {
+            ownTags: data => {
+                if (!data.tags) return [];
+                // console.debug(Object.entries(data))
+                return data.tags.filter(t => !['posts', 'notes'].includes(t));
+            }
+        }
     };
 };
