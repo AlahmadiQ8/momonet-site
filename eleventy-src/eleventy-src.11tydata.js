@@ -6,7 +6,7 @@ const cssFiles = glob.sync('**/*.css', { cwd: 'build' });
 const shortAboutMe =`
 I'm Kuwaiti developer living in Brooklyn NY. My current tech interests are 
 c# (dotnet core) and cloud technologies (AWS). In the past I've done front development 
-with Angular and some React. My hobies include weightlifting, blogging, and Zumba. 
+with Angular and some React. My hobbies include weightlifting, blogging, and Zumba. 
 `;
 
 const social = {
