@@ -1,3 +1,13 @@
 [build]
   publish = "build/"
   command = "npm run build"
+
+[[redirects]]
+  from = "/posts/2018-03-10-on-prioritizing-side-projects/"
+  to = "https://dev.to/alahmadiq8/on-prioritizing-side-projects-3kni"
+  force = true
+
+[[redirects]]
+  from = "/posts/2018-08-13-my-first-chrome-extentsion/"
+  to = "https://dev.to/alahmadiq8/my-first-chrome-extension-stackoverflow-starred-viewer-1nm6"
+  force = true

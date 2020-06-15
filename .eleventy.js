@@ -3,9 +3,6 @@ const { format } = require('date-fns');
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
-  // copy netfliy _redirects file to output dir
-  eleventyConfig.addPassthroughCopy("eleventy-src/_redirects");
-
   // used for debuging only
   eleventyConfig.addFilter("debug", function (value) {
     console.log(value)
