@@ -2,8 +2,12 @@
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
-  padding: 3rem;
+  padding: 3rem 1rem;
   width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    padding: 3rem;
+  }
 
   &-header {
     margin-bottom: 2rem;
