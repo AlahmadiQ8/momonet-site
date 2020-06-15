@@ -3,15 +3,21 @@ const { format } = require('date-fns');
 module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
+  // copy netfliy _redirects file to output dir
+  eleventyConfig.addPassthroughCopy("eleventy-src/_redirects");
+
+  // used for debuging only
   eleventyConfig.addFilter("debug", function (value) {
-    console.log(Object.keys(value))
+    console.log(value)
     return value;
   });
 
+  // formats date
   eleventyConfig.addFilter('formatDate', (dateStr) => {
     return format(new Date(dateStr), 'MMM d, yyyy');
   });
 
+  // collection for all tags excluding directory based tags
   eleventyConfig.addCollection("tagList", getTaglist);
 
   return {

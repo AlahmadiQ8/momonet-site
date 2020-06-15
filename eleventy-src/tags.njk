@@ -17,11 +17,8 @@ permalink: /tags/{{ tag }}/
   <div class="box-body">
     <ul class="box-list">
       {%- for post in postslist | reverse -%}
-      {%- set href -%}
-      {% if post.data.external %}{{ post.data.external }}{% else %}{{ post.url }}{% endif %}
-      {%- endset -%}
       <li>
-        <a href="{{ href | url }}">{{ post.data.title }}</a>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         <div class="post-meta d-flex">
           <time class="post-meta-time">{{ post.date | formatDate }}</time>
           <ul class="post-meta-categories">
