@@ -5,7 +5,7 @@ tags:
   - productivity
 ---
 
-In my [previous article]({{ '/posts/on-prioritizing-side-projects/' | url }}) I mentioned my struggle to manage and complete my side projects. While I have gotten better at time management and organization, I still struggle to keep my momentum. 
+In my [previous article]({{ '/posts/2018-03-10-on-prioritizing-side-projects/' | url }}) I mentioned my struggle to manage and complete my side projects. While I have gotten better at time management and organization, I still struggle to keep my momentum. 
 
 In hopes of getting better at being accountable, I’m trying to limit my goals to a one-week time frame. I set up a small list of no more than three or four goals to complete by the end of the week. These goals have to be doable within that time frame. By the end of each week, I will reflect on these goals and evaluate my progress. 
 
