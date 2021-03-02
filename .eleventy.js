@@ -17,6 +17,8 @@ module.exports = function (eleventyConfig) {
   // collection for all tags excluding directory based tags
   eleventyConfig.addCollection("tagList", getTaglist);
 
+  eleventyConfig.addPassthroughCopy({ "public": "/" });
+
   return {
     dir: {
       input: "eleventy-src",

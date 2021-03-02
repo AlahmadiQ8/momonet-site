@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:webpack": "",
     "build:11ty": "eleventy",
-    "build": "rm -rf build && npm run build:webpack && npm run build:11ty",
+    "build:webpack": "cd momonet-2021 && npm run production && cd .. && cp momonet-2021/build/tailwind.css build/",
+    "build": "rm -rf build && npm run build:11ty && npm run build:webpack",
     "dev:11ty": "eleventy --serve"
   },
   "repository": {
