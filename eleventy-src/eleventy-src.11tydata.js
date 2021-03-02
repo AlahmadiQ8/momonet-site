@@ -1,7 +1,7 @@
 const glob = require('glob');
 
-const jsFiles = glob.sync('**/*.js', { cwd: 'build' });
-const cssFiles = glob.sync('**/*.css', { cwd: 'build' });
+const jsFiles = glob.sync('**/*.js', { cwd: 'momonet-2021/build' });
+const cssFiles = glob.sync('**/*.css', { cwd: 'momonet-2021/build' });
 
 const shortAboutMe =`
 I'm Kuwaiti developer living in Brooklyn NY. My current tech interests are 
