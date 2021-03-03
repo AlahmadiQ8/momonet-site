@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "public": "/" });
 
-  const mapping = { img: 'mx-auto border-gray-400 border-2 rounded' }
+  const mapping = { img: 'mx-auto border-gray-300 border-2 rounded' }
   let markdownIt = require("markdown-it")({
     html: true,
     breaks: false,
