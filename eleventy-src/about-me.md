@@ -1,3 +1,8 @@
-<div class="box">
-    <h1>Coming Soon</h1>
-</div>
+---
+{
+	"layout": "layouts/post.njk",
+    "title": "About Me"
+}
+---
+
+## Coming Soon

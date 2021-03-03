@@ -19,6 +19,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "public": "/" });
 
+  const mapping = { img: 'mx-auto border-gray-400 border-2 rounded' }
+  let markdownIt = require("markdown-it")().use(require('@toycode/markdown-it-class'), mapping);
+  eleventyConfig.setLibrary("md", markdownIt);
+
   return {
     dir: {
       input: "eleventy-src",

@@ -5,9 +5,9 @@ tags:
   - resources
 ---
 
-# Software Development 
+## Software Development 
 
-## Csharp 
+### Csharp 
 
 * [Building a Blazing Fast Object-to-Object Mapper in C# with .NET Core 3.1:](https://www.twilio.com/blog/building-blazing-fast-object-mapper-c-sharp-net-core) A fun read on various approaches for implementing object mappers and their performance.
 * [Creative Use of Extension Methods:](https://tyrrrz.me/blog/creative-use-of-extension-methods) Alexey showcases cool ways to make code cleaner using extension methods.

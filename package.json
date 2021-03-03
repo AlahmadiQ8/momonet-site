@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build:11ty": "eleventy",
-    "build:webpack": "cd momonet-2021 && npm run production && cd .. && cp momonet-2021/build/tailwind.css build/",
+    "build:webpack": "cd momonet-2021 && rm -rf build && npm run production && cd .. && cp momonet-2021/build/tailwind.css build/",
     "build": "rm -rf build && npm run build:11ty && npm run build:webpack",
     "dev:11ty": "eleventy --serve"
   },
@@ -13,8 +13,10 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@toycode/markdown-it-class": "^1.2.4",
     "date-fns": "^2.14.0",
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "markdown-it": "^10.0.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1"

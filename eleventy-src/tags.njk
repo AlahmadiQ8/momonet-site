@@ -17,7 +17,8 @@ permalink: /tags/{{ tag }}/
         <ol class="list-reset flex text-gray-600">
             <li><a href="/" class="font-bold">Home</a></li>
             <li><span class="mx-2">/</span></li>
-            <li>Blog</li>
+            {% set tagName = "blog" if tag == "posts" else tag %}
+            <li>{{ tagName | capitalize }}</li>
         </ol>
     </nav>
 </div>

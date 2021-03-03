@@ -8,7 +8,7 @@ tags:
 > **Update (Mar 17, 2020):** I found out that you can use the tag helper [srcInclude](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.scripttaghelper.srcinclude?view=aspnetcore-3.1#Microsoft_AspNetCore_Mvc_TagHelpers_ScriptTagHelper_SrcInclude) that enables you to use glob patterns such as this: `<script asp-src-include"~/app.*.js"></script>`. Hence, my lengthy hacky way below is unnecessary unless you're deploying hashed assets to a CDN.
 
 <!-- omit in toc -->
-# Content
+## Content
 - [TL;DR](#tl%3Bdr)
 - [Introduction](#introduction)
 - [Alternative Approaches](#alternative-approaches)
@@ -23,11 +23,11 @@ tags:
   - [Edit Your Startup File to Include Angular Assets in Production Mode and Enable Hot Reloading in Development Mode](#edit-your-startup-file-to-include-angular-assets-in-production-mode-and-enable-hot-reloading-in-development-mode)
   - [Final Step: Add Angular Components into a Razor Page](#final-step%3A-add-angular-components-into-a-razor-page)
 
-# TL;DR
+## TL;DR
 
 I describe my approach for adding Angular components in Razor pages in an Asp.Net project. My approach supports both live-reloading for Development mode and publishing hashed assets for production builds. A project example can be [viewed here](https://github.com/AlahmadiQ8/RazorPagesAngular).
 
-# Introduction
+## Introduction
 
 Asp.net Core offers a variety of project templates to get started with. For web applications, in addition to MVC and Razor Pages templates, it also offers templates for frontend single-page applications with integration into asp.net core app. 
 
@@ -37,17 +37,17 @@ In my particular case, I just wanted to add simple Angular components on Razor p
 
 In this post, I will my approach to add angular components to Razor pages. My approach has its flaws. So if you can think of an improvement, please share your feedback. 
 
-# Alternative Approaches
+## Alternative Approaches
 - [Add angular apps to existing dot net core project](https://www.dotnetfocus.com/add-multiple-angular-7-apps-to-existing-dot-net-core-project/): My post is largely inspired by this post. The author makes innovative use of tag helpers to inject Angular assets into a Razor page. They use a web scraping library to extract the Angular assets from Angular-generated `index.html`. The method is more foolproof and not brittle unlike my method of using a shell script. Still, it does not support live server reloading.
 - [Add The latest Angular CLI project(7.x) to ASP.Net Core 2.1 project](https://medium.com/@frankchen2016/add-the-latest-angular-cli-project-to-asp-net-core-2-1-project-dc9205285b97): A very simple and straightforward approach by simply hardcoding Angular assets into a Razor. The downside is that you cannot use it with hashed assets without having to manually hardcode them every time new hashes are generated. 
-# Problem Statement
+## Problem Statement
 
 I want to set up an Angular project such that you can add angular components to Razor pages with no client-side routine. The setup must satisfy the same development experience the official angular template supports. Specifically, the setup must support local development with live reloading. 
 
-# Solution
+## Solution
 
 
-## Add a standard Angular Project with Angular CLI
+### Add a standard Angular Project with Angular CLI
 
 Navigate to your asp.net project directory and create an angular app using Angular CLI:
 
@@ -75,7 +75,7 @@ Your project directory would look something like this:
 ```
 
 
-## Update `package.json` Scripts to Add the Correct Deploy URL
+### Update `package.json` Scripts to Add the Correct Deploy URL
 
 Update the `start` and `build` scripts in `package.json` as follows:
 
@@ -88,7 +88,7 @@ Update the `start` and `build` scripts in `package.json` as follows:
 > You can also update your `angular.json` file to setup the above config as shown [here](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/ClientApp/angular.json#L25)
 
 
-## Add a @RenderSection in _Layout.cshtml to Inject Stylesheets
+### Add a @RenderSection in _Layout.cshtml to Inject Stylesheets
 
 
 > See Final [_Layout.cshtml](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/Pages/Shared/_Layout.cshtml)
@@ -113,7 +113,7 @@ However, you also need another section to inject the Angular generated styleshee
 </head>
 ```
 
-## Add Partial Razor Templates to inject Assets in Development Environment
+### Add Partial Razor Templates to inject Assets in Development Environment
 
 
 > See final [_AppStyleSheets.cshtml](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/Pages/Shared/_AppStyleSheets.cshtml) and [_AppScripts.cshtml](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/Pages/Shared/_AppScripts.cshtml).
@@ -145,7 +145,7 @@ Pages
 ```
 
 
-## Create a Script to Generate Razor Partials for Production Assets
+### Create a Script to Generate Razor Partials for Production Assets
 
 Adding development scripts is straightforward because when running Angular in development mode,  The assets’ file names never change (i.e they’re always `runtime.js`, `polyfills.js`, etc). However, production assets are hashed on each new build. Therefore, They cannot be hardcoded as done in the previous section. Another challenge is figuring out the correct load order of production js assets. The only source of truth for the order is inspecting the generated `index.html` file by the `ng build` command. 
 
@@ -193,7 +193,7 @@ Pages
 ```
 
 
-## Edit your PROJECT.csproj File to Configure Required Tasks for Publishing Angular Assets
+### Edit your PROJECT.csproj File to Configure Required Tasks for Publishing Angular Assets
 
 My csproj file is based on the one generated by dotnet angular template. I added an additional task `CopyPartials` shown below to copy production assets into razor partials. The file can be viewed [here](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/RazorPagesAngular.csproj). 
 
@@ -205,7 +205,7 @@ My csproj file is based on the one generated by dotnet angular template. I added
 ```
 
 
-## Edit Your Startup File to Include Angular Assets in Production Mode and Enable Hot Reloading in Development Mode
+### Edit Your Startup File to Include Angular Assets in Production Mode and Enable Hot Reloading in Development Mode
 
 
 > The final Startup.cs looks like [this](https://github.com/AlahmadiQ8/RazorPagesAngular/blob/master/RazorPagesAngular.csproj)
@@ -239,7 +239,7 @@ if (env.IsDevelopment())
 ```
 
 
-## Final Step: Add Angular Components into a Razor Page
+### Final Step: Add Angular Components into a Razor Page
 
 Now that we’re don’t with all the setup, here is how I add my components: 
 

@@ -2,29 +2,27 @@
 layout: layouts/base.njk
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ title }}</h1>
-    <div class="post-meta d-flex">
-      <time class="post-meta-time">{{ page.date | formatDate }}</time>
-      <ul class="post-meta-categories">
-        {%- for tag in ownTags -%}
-        {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
-        <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </header>
-  <div class="post-body">
-    {{ content | safe }}
-  </div>
-
-  <footer class="post-footer mt-5">
-    <ul class="post-tags">
-      {%- for tag in ownTags -%}
-      {%- set tagUrl -%}/tags/{{ tag }}/{%- endset -%}
-      <li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-  </footer>
-</article>
+<div class="bg-gray-50 border-gray-200 px-12 py-3 border-b-2">
+  <nav>
+      <ol class="list-reset flex text-gray-600">
+          <li><a href="/" class="font-bold">Home</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li><a href="/tags/posts" class="font-bold">Blog</a></li>
+          <li><span class="mx-2">/</span></li>
+      </ol>
+  </nav>
+</div>
+<div class="sm:p-12 p-6 divide-gray-200 flex flex-col">
+    <article class="prose prose-indigo lg:prose-xl max-w-none">
+        <div class="items-center pt-5 md:mb-10 mb-7 border-b-2" href="#">
+            <h1 class="">{{ title }}</h1>
+            {# <h2 class="">Why some families refuxe to feed their kids </h1> #}
+            <time class="">
+                {% if ownTags.length %}
+                {{ page.date | formatDate }}
+                {% endif %}
+            </time>
+        </div>
+        {{ content | safe }}
+    </article>
+</div>
