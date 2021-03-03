@@ -1,7 +1,7 @@
 ---
 title: On Prioritizing Side Projects
 description: In this post, I’ll focus on what I’ve learned about how to prioritize which projects to work on.
-external: https://dev.to/alahmadiq8/on-prioritizing-side-projects-3kni
+permalink: posts/on-prioritizing-side-projects/
 # permalink: false
 tags: 
   - productivity
