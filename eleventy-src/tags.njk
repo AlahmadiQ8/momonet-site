@@ -7,8 +7,9 @@ pagination:
     - all
     - tagList
   addAllPagesToCollections: true
-title: Tagged "{{ tag }}"
-permalink: /tags/{{ tag }}/
+eleventyComputed:
+  title: "Tagged \"{{ tag }}\""
+permalink: "/tags/{{ tag }}/"
 ---
 {% set postslist = collections[ tag ] %}
 
