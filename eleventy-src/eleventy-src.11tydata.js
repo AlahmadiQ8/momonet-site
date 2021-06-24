@@ -4,9 +4,9 @@ const jsFiles = glob.sync('**/*.js', { cwd: './momonet-2021/build' });
 const cssFiles = glob.sync('**/*.css', { cwd: './momonet-2021/build' });
 
 const shortAboutMe =`
-I'm Kuwaiti developer living in Brooklyn NY. My current tech interests are 
-c# (dotnet core) and cloud technologies (AWS). In the past I've done front development 
-with Angular and some React. My hobbies include weightlifting, blogging, and Zumba. 
+I'm a Kuwaiti developer living in Brooklyn NY. I love working with the .net stack,
+which subsequently led me to my career at Microsoft. My hobbies include weight lifting, and watercoloring.
+I also play a lot of video games mostly on PC.
 `;
 
 const social = {
