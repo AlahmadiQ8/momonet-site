@@ -9,8 +9,8 @@
     href: blog/2019-02-20-new-year-better-me.md
   - name: First Lightning Talk - Intersection Observer API
     href: blog/2018-10-29-first-lightning-talk.md
-  - name: Setting Up Weekly Goals
-    href: blog/2018-10-27-setting-up-weekly-goals.md
+  # - name: Setting Up Weekly Goals
+  #   href: blog/2018-10-27-setting-up-weekly-goals.md
   - name: My First Chrome Extension - Stackoverflow Starred Viewer
     href: https://dev.to/alahmadiq8/my-first-chrome-extension-stackoverflow-starred-viewer-1nm6
   - name: Fear of Looking Stupid
