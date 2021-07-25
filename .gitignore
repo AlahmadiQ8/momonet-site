@@ -12,3 +12,16 @@ yarn-error.log
 yarn.lock
 .yarnclean
 .vscode
+
+# Local Netlify folder
+.netlify
+
+###############
+#    folder   #
+###############
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site

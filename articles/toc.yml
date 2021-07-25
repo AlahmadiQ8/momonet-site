@@ -1,0 +1,32 @@
+- name: Articles
+  href: articles.md
+
+- name: Blog
+  items:
+  - name: I Want To Be A Better Writer
+    href: blog/2021-03-21-i-want-to-be-a-better-writer.md
+  - name: New Year Better Me
+    href: blog/2019-02-20-new-year-better-me.md
+  - name: First Lightning Talk - Intersection Observer API
+    href: blog/2018-10-29-first-lightning-talk.md
+  - name: Setting Up Weekly Goals
+    href: blog/2018-10-27-setting-up-weekly-goals.md
+  - name: My First Chrome Extension - Stackoverflow Starred Viewer
+    href: https://dev.to/alahmadiq8/my-first-chrome-extension-stackoverflow-starred-viewer-1nm6
+  - name: Fear of Looking Stupid
+    href: blog/2018-05-21-fear-of-looking-stupid.md
+  - name: On Prioritizing Side Projects
+    href: blog/2018-03-10-on-prioritizing-side-projects.md
+
+- name: Notes
+  items:
+  - name: Collection of My Favorite Articles
+    href: notes/2020-05-21-collection-of-my-favorite-articles.md
+  - name: Snippets - Creating Customer Json Property Naming Policies in ASP.Net Core
+    href: notes/2020-05-14-snippets-json-property-policies.md
+  - name: Adding Angular Components to an Existing Razor Page in an ASP.Net Core App
+    href: notes/2020-03-11-Adding-Angular-App-to-an-Existing-Razor-Page.md
+  - name: GreenSock - Rotating an Element in a Circular Motion While Keeping the Orientation Fixed
+    href: notes/2019-03-28-greensock-rotating-an-element-in-a-circular-motion.md
+  - name: Making a Strongly Typed Words Offset Iterator with Iterators & Generators
+    href: notes/2019-03-13-making-a-strongly-typed-words-offset-iterator.md
