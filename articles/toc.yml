@@ -28,5 +28,5 @@
     href: notes/2020-03-11-Adding-Angular-App-to-an-Existing-Razor-Page.md
   - name: GreenSock - Rotating an Element in a Circular Motion While Keeping the Orientation Fixed
     href: notes/2019-03-28-greensock-rotating-an-element-in-a-circular-motion.md
-  - name: Making a Strongly Typed Words Offset Iterator with Iterators & Generators
-    href: notes/2019-03-13-making-a-strongly-typed-words-offset-iterator.md
+  # - name: Making a Strongly Typed Words Offset Iterator with Iterators & Generators
+  #   href: notes/2019-03-13-making-a-strongly-typed-words-offset-iterator.md

@@ -55,6 +55,51 @@ Talking to users is useful at all stages
 * Built prototype -> Best first customer
 * Launched -> find product market fit
 
+[Kevin Hale - How to Pitch Your Startup](https://www.youtube.com/watch?v=17XZGUX_9iM)
+
+Links:
+* [How to Apply to Y Combinator](https://www.ycombinator.com/howtoapply/)
+* [How to Design a Better Pitch Deck](https://www.ycombinator.com/library/4T-how-to-design-a-better-pitch-deck)
+
+Watch out from SISP: Solution In Search of a Problem
+
+Have clear idea
+
+How to make things easy to understand?
+* Make it legible
+* Make it simple
+* Make it Obvious
+
+Legible ideas can be understood by people who know noting about your business
+
+Things to avoid:
+* Ambiguity
+* Complexity
+* Mystery: Jargon, words hard to understand
+* Ignorable: Marketing speak, MBA speak, buzz words
+
+Tips:
+* Be conversational
+* No Jargon
+* No Preamble
+* Be reproducible
+
+Your pitch has to deliver these three ideas
+1. What are you making?
+2. What is the problem?
+3. Who is the customer?
+
+Examples:
+* Airbnb is the first online marketplace that lets travelers book rooms with locals instead of hotels.
+* Dropbox synchronizes files across your/your team's computers.
+* Lumineye is building x-ray vision for soldiers and first responders.
+
+Lead with what not why or how
+
+* Do I understand the idea?
+* Am I excited by the idea?
+* Do I like the team?
+
 ## Software Development
 
 ### Csharp
